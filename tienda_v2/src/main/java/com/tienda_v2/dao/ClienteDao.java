@@ -1,8 +1,8 @@
 package com.tienda_v2.dao;
 
 import com.tienda_v2.domain.Cliente;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface ClienteDao extends JpaRepository<Cliente, Long> {
+public interface ClienteDao extends CrudRepository<Cliente, Long> {
     
 }

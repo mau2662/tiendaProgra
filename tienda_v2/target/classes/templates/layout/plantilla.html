@@ -76,6 +76,11 @@
                         &COPY [[#{plantilla.derechos}]]
                         <a th:href="@{/(lang=es)}">ES</a> | 
                         <a th:href="@{/(lang=en)}">EN</a>
+                        [[plantilla.tusuario]]: <span sec:authentication="name">xx</span>
+                        [[plantilla.troles]]: <span sec:authentication="principal.authorities">xx</span>
+                        <form method="POST" th:action="@{/logout}" style="display: inline">                    
+                            <a href="#" onclick="this.parentNode.submit();">Logout</a>
+                        </form>
                     </p>
                 </div>
             </div>

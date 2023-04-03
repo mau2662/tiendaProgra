@@ -28,7 +28,7 @@ public class TemplateResolverConfiguration {
     @Bean
     public ClassLoaderTemplateResolver TemplatesResolver_1(){
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-        templateResolver.setPrefix("templates/categoria/");
+        templateResolver.setPrefix("templates/categoria");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
@@ -40,7 +40,7 @@ public class TemplateResolverConfiguration {
     @Bean
     public ClassLoaderTemplateResolver TemplatesResolver_2(){
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-        templateResolver.setPrefix("templates/articulo/");
+        templateResolver.setPrefix("templates/articulo");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
@@ -52,7 +52,7 @@ public class TemplateResolverConfiguration {
     @Bean
     public ClassLoaderTemplateResolver TemplatesResolver_3(){
         ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
-        templateResolver.setPrefix("templates/cliente/");
+        templateResolver.setPrefix("templates/cliente");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");

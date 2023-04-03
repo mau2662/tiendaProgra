@@ -4,6 +4,7 @@ C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\c
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\service\ArticuloService.java
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\TemplateResolverConfiguration.java
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\controller\ClienteController.java
+C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\SecurityConfig.java
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\service\impl\ClienteServiceImpl.java
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\WebConfig.java
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\service\ClienteService.java
@@ -18,3 +19,4 @@ C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\c
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\domain\Credito.java
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\controller\CategoriaController.java
 C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\service\CategoriaService.java
+C:\Users\varga\OneDrive\Documentos\GitHub\tiendaProgra\tienda_v2\src\main\java\com\tienda_v2\controller\IndexController.java

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org" 
+      xmlns:sec="http://thymeleaft.org/extras/spring-security">
+
     <head th:fragment="head">
         <title>TechShop</title>
         <meta charset="UTF-8"/>
@@ -76,6 +78,11 @@
                         &COPY [[#{plantilla.derechos}]]
                         <a th:href="@{/(lang=es)}">ES</a> | 
                         <a th:href="@{/(lang=en)}">EN</a>
+                        [[plantilla.tusuario]]: <span sec:authentication="name">xx</span>
+                        [[plantilla.troles]]: <span sec:authentication="principal.authorities">xx</span>
+                        <form method="POST" th:action="@{/logout}" style="display: inline">                    
+                            <a href="#" onclick="this.parentNode.submit();">Logout</a>
+                        </form>
                     </p>
                 </div>
             </div>

@@ -5,11 +5,13 @@ import java.util.List;
 
 public interface CategoriaService {
 
+    //Se recupera una lista con todos los registros de la tabla cliente
     public List<Categoria> getCategorias(boolean activos);
-    
-    public void save(Categoria categoria);
-    
-    public Categoria getCategoria(Categoria categoria);
-    
-    public void delete(Categoria categoria);
+
+    public void save(Categoria cliente);
+
+    public void delete(Categoria cliente);
+
+    public Categoria getCategoria(Categoria cliente);
+
 }

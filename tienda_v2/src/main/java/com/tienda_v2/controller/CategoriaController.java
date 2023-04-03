@@ -13,40 +13,39 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 @Slf4j
 public class CategoriaController {
-    
+
     @Autowired
-    CategoriaService categoriaService;
-    
+    private CategoriaService categoriaService;
+
     @GetMapping("/categoria/listado")
     public String inicio(Model model) {
         var categorias = categoriaService.getCategorias(false);
         model.addAttribute("categorias", categorias);
-        return "/categoria/listado";    
+        return "/categoria/listado";
     }
-    
+
     @GetMapping("/categoria/nuevo")
-    public String nuevoCategoria(Categoria categoria) {
-        return "/categoria/modificar";
+    public String nuevoCategoria(Categoria cliente) {
+        return "/categoria/modifica";
     }
-    
+
     @PostMapping("/categoria/guardar")
-    public String guardaCategoria(Categoria categoria) {
-        categoriaService.save(categoria);
+    public String guardaCategoria(Categoria cliente) {
+        categoriaService.save(cliente);
         return "redirect:/categoria/listado";
     }
-    
-    
+
     @GetMapping("/categoria/eliminar/{idCategoria}")
-    public String eliminarCategoria(Categoria categoria) {
-        categoriaService.delete(categoria);
+    public String eliminaCategoria(Categoria cliente) {
+        categoriaService.delete(cliente);
         return "redirect:/categoria/listado";
     }
-    
+
     @GetMapping("/categoria/modificar/{idCategoria}")
-    public String modificaCategoria(Categoria categoria, Model model) {
-        categoria = categoriaService.getCategoria(categoria);
-        model.addAttribute("categoria",categoria);
-        return "redirect:/categoria/listado";
+    public String modificarCategoria(Categoria cliente, Model model) {
+        cliente = categoriaService.getCategoria(cliente);
+        model.addAttribute("cliente", cliente);
+        return "/categoria/modifica";
     }
-    
+
 }

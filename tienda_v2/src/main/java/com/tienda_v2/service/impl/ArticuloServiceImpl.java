@@ -1,4 +1,3 @@
-
 package com.tienda_v2.service.impl;
 
 import com.tienda_v2.dao.ArticuloDao;
@@ -7,33 +6,39 @@ import com.tienda_v2.service.ArticuloService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ArticuloServiceImpl implements ArticuloService{
-    
+public class ArticuloServiceImpl implements ArticuloService {
+
     @Autowired
-    private ArticuloDao articuloDao;
-    
+    private ArticuloDao clienteDao;
+
     @Override
-    public List<Articulo> getArticulos(boolean activos){
-     var lista = (List<Articulo>)articuloDao.findAll();
-     
-     if(activos){lista.removeIf(e-> !e.isActivo());}
-     return lista;
+    @Transactional(readOnly = true)
+    public List<Articulo> getArticulos(boolean activos) {
+        var lista = (List<Articulo>) clienteDao.findAll();
+        if (activos) {
+            lista.removeIf(e -> e.isActivo());
+        }
+        return lista;
     }
-    
-    
+
     @Override
-    public void save(Articulo articulo){
-        articuloDao.save(articulo);
+    public void save(Articulo cliente) {
+        clienteDao.save(cliente);
     }
-    
+
     @Override
-    public void delete(Articulo articulo){
-        articuloDao.delete(articulo);
+    public void delete(Articulo cliente) {
+        clienteDao.delete(cliente);
+
     }
+
     @Override
-    public Articulo getArticulo(Articulo articulo){
-        return articuloDao.findById(articulo.getIdArticulo()).orElse(null);
-  }            
+    @Transactional(readOnly = true)
+    public Articulo getArticulo(Articulo cliente) {
+        return clienteDao.findById(cliente.getIdArticulo()).orElse(null);
+    }
+
 }
